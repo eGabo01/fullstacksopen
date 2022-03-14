@@ -1,0 +1,31 @@
+browser --> web: request URL metod POST : https://studies.cs.helsinki.fi/exampleapp/new_note
+web --> browser: Respond: HTML - Code 302
+
+note over browser:
+browser takes the 302 URL redirect
+request back to reload back a notes page
+end note
+
+browser -->web: request URL method GET: https://studies.cs.helsinki.fi/exampleapp/notes
+web --> browser: Respond: HTML status code 200
+
+browser  --> web: request URL  method GET:https://studies.cs.helsinki.fi/exampleapp/main.css
+web --> browser: main.css
+
+browser  --> web: request URL method GET:https://studies.cs.helsinki.fi/exampleapp/main.js
+web --> browser : main.js
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser -->web: request URL method GET:https://studies.cs.helsinki.fi/favicon.ico
+web-->browser: .ico
+
+browser --> web:request URL method GET: https://studies.cs.helsinki.fi/exampleapp/data.json
+web-->browser: data.json
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

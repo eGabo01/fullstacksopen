@@ -1,0 +1,23 @@
+browser-->web: Request HTTP GET :https://studies.cs.helsinki.fi/exampleapp/spa
+web -->browser: Respond HTML status code 200
+
+browser-->web: Request HTTP GET:https://studies.cs.helsinki.fi/exampleapp/main.css
+web--> browser: Main.css
+
+browser-->web: request  HTTP get: https://studies.cs.helsinki.fi/exampleapp/spa.js
+web -->browser: spa.js
+
+note over browser:
+browser executing spa.js that request data.json
+end note
+
+browser -->web: Request HTTP get: https://studies.cs.helsinki.fi/exampleapp/data.json
+web --> browser: data.json: [{"content":"holis ohf","date":"2022-03-05T00:07:18.794Z"},...
+
+browser-->web: HTTP GET : https://studies.cs.helsinki.fi/favicon.ico
+web -->browser: favicon.ico
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
